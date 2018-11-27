@@ -28,4 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Functions
 
-Create Posts and bind the data
+Data binding to posts.
+OnInit functions.
+Forms
