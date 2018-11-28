@@ -28,6 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Functions
 
-Data binding to posts.
-OnInit functions.
-Forms
+Data binding to posts. Forms save what user enters and resets with 'Save Post'. 
