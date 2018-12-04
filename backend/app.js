@@ -7,7 +7,7 @@ const app = express();
 // pass body parser call json method
 app.use(bodyParser.json());
 // parse url encoded data
-app.use(bodyParser.urlencoded({ extended: false}));
+// app.use(bodyParser.urlencoded({ extended: false}));
 
 //CORS headers
 app.use((req, res, next) => {
@@ -24,16 +24,15 @@ app.use((req, res, next) => {
 });
 
 // API posts route
-app.post("/api/posts", (req, res, next) => {
-  const posts = req.body;
+app.post('/api/posts', (req, res, next) => {
+  const post = req.body;
   console.log(post);
-  res.status(201).json ({
-    message: "Post added successfully.";
-  })
+  res.status(201).json({
+    message: "Post added successfully!"
+  });
 });
 
-
-app.use('/api/posts', (req, res, next) => {
+app.get('/api/posts', (req, res, next) => {
   const posts = [
     {
       id: '123',
