@@ -1,7 +1,15 @@
 const express = require('express');
+const bodyParser = require("body-parser");
 
 const app = express();
 
+// handle all incoming requests
+// pass body parser call json method
+app.use(bodyParser.json());
+// parse url encoded data
+app.use(bodyParser.urlencoded({ extended: false}));
+
+//CORS headers
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader(
@@ -14,6 +22,16 @@ app.use((req, res, next) => {
     );
   next();
 });
+
+// API posts route
+app.post("/api/posts", (req, res, next) => {
+  const posts = req.body;
+  console.log(post);
+  res.status(201).json ({
+    message: "Post added successfully.";
+  })
+});
+
 
 app.use('/api/posts', (req, res, next) => {
   const posts = [
