@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 v1.0
 Front-end user can create a title and content, save the post and store messages. RESTful API created with Node.js and Express.js. Angular HTTP client added to fetch posts from front-end to backend. Fixed CORS errors. 
 
-v1.1 Added POST backend point. Connected Angular to server side. Implemented Mongodb and Mongoose.
+v1.1 Added POST backend point. Connected Angular to server side. Implemented Mongodb and Mongoose. Added Routing between My Messages (saved posts) and New Posts. 
 
 ## Development server
 
