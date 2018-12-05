@@ -39,16 +39,16 @@ app.post('/api/posts', (req, res, next) => {
 
 app.get('/api/posts', (req, res, next) => {
   const posts = [
-    {
-      id: '123',
-      title: 'First server-side post',
-      content: 'This is coming from the server'
-    },
-    {
-      id: 'abc',
-      title: 'Second server-side post',
-      content: 'This is coming from the server!'
-    }
+    // {
+    //   id: '123',
+    //   title: 'First server-side post',
+    //   content: 'This is coming from the server'
+    // },
+    // {
+    //   id: 'abc',
+    //   title: 'Second server-side post',
+    //   content: 'This is coming from the server!'
+    // }
   ];
   res.status(200).json({
     message: 'Posts fetched successfully!',
