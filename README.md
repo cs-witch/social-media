@@ -3,12 +3,10 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
 v1.1 Connected Angular to server side. Connected app to Mongodb and Mongoose. Added: POST backend point. 
-Routing between My Messages (saved posts) and New Posts. Fetch data from server. Map data responses. Deleting posts on frontend
+Routing between My Messages (saved posts) and New Posts. Fetch data from server. Map data responses. Deleting posts on frontend responds with deletions on back-end.
 
 v1.0
 Front-end user can create a title and content, save the post and store messages. RESTful API created with Node.js and Express.js. Angular HTTP client added to fetch posts from front-end to backend. Fixed CORS errors. 
-
-
 
 ## Development server
 
