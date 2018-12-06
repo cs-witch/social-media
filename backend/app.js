@@ -1,11 +1,20 @@
 const express = require('express');
 const bodyParser = require("body-parser");
+const mongoose = require('mongoose');
 
 const Post = require('./models/post');
 
 const app = express();
 
-// handle all incoming requests
+mongoose.connect("mongodb+srv://andisa:ggPZZv6B6a1vvQMW@cluster0-dznjh.mongodb.net/test?retryWrites=true", { useNewUrlParser: true })
+  .then(()  => {
+    console.log('Connected to database!')
+  })
+  .catch(() => {
+    console.log('Connection failed!')
+  });
+
+// handle all incoming requestss
 // pass body parser call json method
 app.use(bodyParser.json());
 // parse url encoded data
