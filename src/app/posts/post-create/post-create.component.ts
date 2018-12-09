@@ -14,9 +14,9 @@ import { Post } from '../post.model';
 export class PostCreateComponent implements OnInit {
   enteredContent = '';
   enteredTitle = '';
+  post: Post;
   private mode = 'create';
   private postId: string;
-  post: Post;
 
   constructor(public postsService: PostsService, public route: ActivatedRoute) {}
 
