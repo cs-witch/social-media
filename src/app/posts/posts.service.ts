@@ -36,7 +36,10 @@ constructor (private http: HttpClient) {}
   }
 
   getPost(id: string) {
-    return this.http.get<{_id: string, title: string, content: string}>('http://localhost:3000/api/posts/' + id);
+    return this.http.get<{
+      _id: string,
+      title: string,
+      content: string}>('http://localhost:3000/api/posts/' + id);
   }
 
   addPost(title: string, content: string) {
@@ -51,7 +54,7 @@ constructor (private http: HttpClient) {}
       });
   }
 
-  updatePosst(id: string, title: string, content: string) {
+  updatePost(id: string, title: string, content: string) {
     const post: Post = { id: id, title: title, content: content };
     this.http
     .put('http://localhost:3000/api/posts/' + id, post)

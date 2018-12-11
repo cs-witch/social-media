@@ -8,10 +8,10 @@
       name="title"
       [ngModel]="post?.title"
       required
-      minlength="3"
+      minlength="1"
       placeholder="Post Title"
       #title="ngModel">
-      <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
+      <mat-error *ngIf="title.invalid">Please enter a post title .</mat-error>
     </mat-form-field>
     <!-- Content-->
     <mat-form-field>
