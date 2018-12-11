@@ -2,7 +2,9 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 
+const postsRoutes = require("./routes/posts")
 const Post = require('./models/post');
+
 
 const app = express();
 
@@ -61,7 +63,7 @@ app.post('/api/posts', (req, res, next) => {
   });
 
 // returns all entries
-app.get('/api/posts', (req, res, next) => {
+app.get("/api/posts/:id", (req, res, next) => {
   Post.find().then(documents => {
       res.status(200).json({
         message: 'Posts fetched successfully!',
@@ -79,4 +81,6 @@ app.delete("/api/posts/:id", (req, res, next) => {
   });
 });
 
-  module.exports = app;
+app.use("/api/posts", postsRoutes);
+
+module.exports = app;

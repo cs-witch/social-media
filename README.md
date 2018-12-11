@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
+v1.2 Added Edit function. Update posts on the server.
+
 v1.1 Connected Angular to server side. Connected app to Mongodb and Mongoose. Added: POST backend point. 
 Routing between My Messages (saved posts) and New Posts. Fetch data from server. Map data responses. Deleting posts on frontend responds with deletions on back-end.
 
