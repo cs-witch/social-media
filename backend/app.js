@@ -47,6 +47,18 @@ app.post('/api/posts', (req, res, next) => {
     });
   });
 });
+  // update existing values
+  app.put("/api/posts/:id", (req, res, next) => {
+    const post = new Post ({
+      _id: req.body.id,
+      title: req.body.title,
+      content: req.body.content
+    });
+    Post.updateOne({_id: req.params.id }, post).then(result => {
+      console.log(result);
+      res.status(200).json({ message: 'Update Successful!!'});
+    });
+  });
 
 // returns all entries
 app.get('/api/posts', (req, res, next) => {
